@@ -16,7 +16,8 @@ function buttonClicked() {
     counter++;//increments each time button is clicked
     $('.newDiv').append(`<div class="newClass"></div>`);//creates new div element on DOM
     $('.newClass').append(`<p class="newP">${counter}</p>`);//creates new p tag
-    $('.newClass').append(`<button type="button" onClick="changeToYellow()" id="swapButton">Swap</button>`);//creates swap button
+    $('.newClass').append(`<button type="button"  onClick="toggleClass()" id="swapButton">Swap</button>`);//creates swap button
+    // $('.newClass').append(`<button type="button" onClick="changeToYellow()" onClick="changeToRed()" id="swapButton">Swap</button>`);//creates swap button
     $('.newClass').append(`<button type="button" id="deleteButton">Delete</button>`);//creates delete button
 }// end button clicked
 
@@ -25,5 +26,10 @@ function changeToYellow(){
 }
 
 function changeToRed(){
-    $('.newDiv').css('background-color', 'yellow');
+    $('.newDiv').css('background-color', 'red');
+}
+
+function toggleClass(){
+    $('.newDiv').toggleClass('red');
+    $('.newDiv').toggleClass('yellow');
 }
