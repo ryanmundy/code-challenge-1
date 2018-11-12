@@ -11,8 +11,9 @@ function readyNow(){
 
 function buttonClicked() {
     console.log('generate button clicked');
+    $('.newDiv').empty();
     counter++;//increments each time button is clicked
-    $('.bodyClass').append(`<div class="newClass"></div>`);//creates new div element on DOM
-    $('.newClass').append(`<p class="newP">new p tag</p>`);//creates new p tag
+    $('.newDiv').append(`<div class="newClass"></div>`);//creates new div element on DOM
+    $('.newClass').append(`<p class="newP">${counter}</p>`);//creates new p tag
 
 }
